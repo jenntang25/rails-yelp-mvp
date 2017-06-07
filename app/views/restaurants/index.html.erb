@@ -1,10 +1,25 @@
-<div class="container">
+<div class="text-center">
+    <h1>YelpRants</h1>
+    <br>
+  <ul class="list-unstyled" >
+  <% @restaurants.each do |restaurant| %>
+  <hr>
+  <li>
+    <h2><%= restaurant.name %></h2>
+    <p><%= restaurant.address %></p>
+    <p><%= restaurant.category %></p>
+    <p><%= restaurant.phone_number %></p>
+     <p class="btn btn-danger"><%= link_to 'Show', restaurant_path(restaurant) %></p>
+     <p class="btn btn-default" ><%= link_to "New restaurant", new_restaurant_path %></p>
+  </li>
+  <hr>
 
-<h1>YelpRants</h1>
-<% @restaurants.each do |restaurant| %>
-  <h2><%= restaurant.name %></h2>
-  <p><%= restaurant.address %></p>
-  <p><%= restaurant.category %></p>
 <% end %>
+<br>
 
+
+</ul>
 </div>
+
+
+

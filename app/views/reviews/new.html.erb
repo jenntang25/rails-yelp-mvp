@@ -1,2 +1,22 @@
-<h1>Reviews#new</h1>
-<p>Find me in app/views/reviews/new.html.erb</p>
+<div class="text-center">
+  <div class="form-group">
+
+   <h1>New Review</h1>
+  <ul>
+    <li class="list-unstyled">
+
+    <%= simple_form_for [@restaurant, @review] do |f| %>
+    <% f.error_notification %>
+
+    <%= f.input :rating %>
+    <%= f.input :content %>
+    <%= f.button :submit %>
+    </li>
+    <% end %>
+  </ul>
+    </div>
+
+<%= link_to 'Back', restaurants_path %>
+</div>
+
+

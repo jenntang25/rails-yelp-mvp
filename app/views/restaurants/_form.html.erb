@@ -1,0 +1,19 @@
+<div class="text-center">
+<ul>
+  <li class="list-unstyled">
+
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <% f.error_notification %>
+
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :category %>
+    <%= f.button :submit %>
+  </li>
+    <% end %>
+    </ul>
+</div>
+
+
+
+
